@@ -1,0 +1,26 @@
+.header {
+  text-align: center;
+  position: relative;
+}
+
+.goblin {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Special Elite';
+  top: 25%;
+  left: 50%;
+  font-size: 70px;
+  transform: rotate(-11deg);
+  text-transform: uppercase;
+  color: #841313;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 220px;
+}

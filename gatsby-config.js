@@ -5,5 +5,26 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  plugins: [
+    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Special Elite`
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Bender"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
+  ],
 }
