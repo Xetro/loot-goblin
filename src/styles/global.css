@@ -7,6 +7,9 @@ html {
 .updated {
   width: 90%;
   margin: 1em auto;
+}
+
+.updated-price {
   color: green;
 }
 
