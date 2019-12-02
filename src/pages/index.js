@@ -27,6 +27,7 @@ let timeFromUpdated = moment(updated, 'YYYYMMDDHHmmss').from(moment());
 
 export default () => (
   <div>
+    <div className='alpha'>Alpha version 0.0.1 test</div>
     <Header />
     <div className='updated'>Last update: {timeFromUpdated}</div>
     <TierGrid itemData={mapped}/>
