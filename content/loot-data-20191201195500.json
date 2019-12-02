@@ -2496,21 +2496,6 @@
     ]
   },
   {
-    "name": "Old firesteel",
-    "image": "FireSteelIcon.png",
-    "title": "Old firesteel",
-    "pageId": 11929,
-    "size": {
-      "width": "1",
-      "height": "1"
-    },
-    "imagePath": "https://gamepedia.cursecdn.com/escapefromtarkov_gamepedia/8/87/FireSteelIcon.png?version=5aefe619f0d510860c898032b9e4bccb",
-    "filePath": "old_firesteel",
-    "marketSearchName": "Old firesteel",
-    "marketPositionOffset": 0,
-    "price_array": []
-  },
-  {
     "name": "Deadlyslob's beard oil",
     "image": "Deadlyslobs beard oil icon.png",
     "title": "Deadlyslob's beard oil",
