@@ -21,8 +21,6 @@ const mapped = JSONData.map(item => {
 
 mapped.sort((a, b) => b.pricePerSlot - a.pricePerSlot);
 
-console.log(mapped);
-
 export default () => (
   <div>
     <Header />
