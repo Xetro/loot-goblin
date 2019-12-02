@@ -9,8 +9,17 @@ import suppressorData from "../../content/suppressors-data-20191201195545.json"
 const JSONData = lootData.concat(suppressorData);
 
 const mapped = JSONData.map(item => {
-  let sum = item.price_array.reduce((acc, val) => acc + parseInt(val), 0);
-  let avgPrice = Math.floor(sum / item.price_array.length);
+
+  let avgPrice;
+
+  if (item.price_array.length > 3) {
+    let sliced = item.price_array.slice(0, 3);
+    let sum = sliced.reduce((acc, val) => acc + parseInt(val), 0);
+    avgPrice = Math.floor(sum / sliced.length);
+  } else {
+    let sum = item.price_array.reduce((acc, val) => acc + parseInt(val), 0);
+    avgPrice = Math.floor(sum / item.price_array.length);
+  }
   let slots = item.size.width * item.size.height;
   let pricePerSlot = Math.floor(avgPrice / slots);
   
