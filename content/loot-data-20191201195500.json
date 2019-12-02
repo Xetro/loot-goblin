@@ -705,21 +705,6 @@
     ]
   },
   {
-    "name": "Wires",
-    "image": "Wiresicon.png",
-    "title": "Wires",
-    "pageId": 12645,
-    "size": {
-      "width": "1",
-      "height": "1"
-    },
-    "imagePath": "https://gamepedia.cursecdn.com/escapefromtarkov_gamepedia/a/a4/Wiresicon.png?version=da8dce2d56a6a912fa940f7647b4efe3",
-    "filePath": "wires",
-    "marketSearchName": "Wires",
-    "marketPositionOffset": 0,
-    "price_array": []
-  },
-  {
     "name": "Broken GPhone X",
     "image": "Broken GPhone x Icon.png",
     "title": "Broken GPhone X",
