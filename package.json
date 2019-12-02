@@ -19,6 +19,7 @@
     "gatsby-plugin-react-css-modules-scss-support": "^0.1.0",
     "gatsby-plugin-sass": "^2.1.24",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"

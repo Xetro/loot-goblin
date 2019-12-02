@@ -3,3 +3,9 @@ html {
   font-family: 'Bender';
   color: #9A9E8F;
 }
+
+.updated {
+  width: 90%;
+  margin: 1em auto;
+  color: green;
+}

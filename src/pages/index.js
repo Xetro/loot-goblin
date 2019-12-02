@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../components/header"
 import TierGrid from "../components/tierGrid"
+import * as moment from 'moment';
 
 import JSONData from "../../content/loot-data-20191201195500.json"
 
@@ -21,9 +22,13 @@ const mapped = JSONData.map(item => {
 
 mapped.sort((a, b) => b.pricePerSlot - a.pricePerSlot);
 
+let updated = '20191201195500';
+let timeFromUpdated = moment(updated, 'YYYYMMDDHHmmss').from(moment());
+
 export default () => (
   <div>
     <Header />
+    <div className='updated'>Last update: {timeFromUpdated}</div>
     <TierGrid itemData={mapped}/>
   </div>
 )

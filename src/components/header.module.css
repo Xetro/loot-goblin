@@ -1,11 +1,12 @@
 .header {
   text-align: center;
   position: relative;
+  margin-bottom: 150px;
 }
 
 .goblin {
   position: absolute;
-  top: 95%;
+  top: 140%;
   right: 5%;
 }
 
