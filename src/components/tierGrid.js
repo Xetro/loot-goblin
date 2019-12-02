@@ -12,8 +12,8 @@ export default props => (
     </div>
 
     {props.itemData.map((item, index) => {
-      return <div className={[styles.row, styles.flexTable].join(' ')}>
-        <div className={styles.flexCell}><img src={item.imagePath} key={item.imagePath}></img></div>
+      return <div className={[styles.row, styles.flexTable].join(' ')} key={`content_item_${item.name}`}>
+        <div className={styles.flexCell}><img src={item.imagePath} key={item.imagePath} alt={item.name}></img></div>
         <div className={styles.flexCell}><span><strong>{item.name}</strong></span></div>
         <div className={styles.flexCell}><span>{item.slots}</span></div>
         <div className={styles.flexCell}><span>{item.avgPrice.toLocaleString()} &#8381;</span></div>
