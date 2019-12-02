@@ -12,12 +12,12 @@ export default props => (
     </div>
 
     {props.itemData.map((item, index) => {
-      return <div className={[styles.row, styles.flexTable].join(' ')}>
-        <div className={styles.flexCell} key={`content_item_${index}`}><img src={item.imagePath}></img></div>
-        <div className={styles.flexCell} key={`content_item_${index}`}><span><strong>{item.name}</strong></span></div>
-        <div className={styles.flexCell} key={`content_item_${index}`}><span>{item.slots}</span></div>
-        <div className={styles.flexCell} key={`content_item_${index}`}><span>{item.avgPrice.toLocaleString()} &#8381;</span></div>
-        <div className={styles.flexCell} key={`content_item_${index}`}><span>{item.pricePerSlot.toLocaleString()} &#8381;</span></div>
+      return <div className={[styles.row, styles.flexTable].join(' ')}  key={`content_item_${index}`}>
+        <div className={styles.flexCell}><img src={item.imagePath}></img></div>
+        <div className={styles.flexCell}><span><strong>{item.name}</strong></span></div>
+        <div className={styles.flexCell}><span>{item.slots}</span></div>
+        <div className={styles.flexCell}><span>{item.avgPrice.toLocaleString()} &#8381;</span></div>
+        <div className={styles.flexCell}><span>{item.pricePerSlot.toLocaleString()} &#8381;</span></div>
       </div>
     })}
 
