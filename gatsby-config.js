@@ -5,8 +5,15 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `EFT Loot Goblin`,
+    description: `Market prices for EFT items`,
+  },
+  
   plugins: [
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -24,6 +31,13 @@ module.exports = {
           families: ["Bender"],
           urls: ["/fonts/fonts.css"],
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
       },
     },
   ],
