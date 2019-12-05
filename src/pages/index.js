@@ -14,7 +14,10 @@ export default ({ data }) => (
       <title>EFT Loot Goblin</title>
       <link rel="canonical" href="https://eft-loot.com/" />
     </Helmet>
-    <div className='alpha'>Alpha version 0.0.3 test</div>
+    <div className='alpha'>
+      <span>Alpha version 0.0.3 test</span>
+      <span>Current categories: Barter, Suppresors, Scopes, Keys, Medical</span>
+    </div>
     <Header />
     <TierGrid graphData={ data }/>
   </div>
