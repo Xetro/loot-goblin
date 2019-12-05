@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./tierGrid.module.scss"
 import * as moment from 'moment';
+import * as _ from 'lodash';
 
 let updated = '20191205001200';
 let timeFromUpdated = moment(updated, 'YYYYMMDDHHmmss').from(moment());
@@ -9,19 +10,32 @@ export default class TierGrid extends React.Component {
   state = {
     data: this.props.graphData.allDataJson.nodes,
     filteredData: this.props.graphData.allDataJson.nodes,
+    filterQuery: '',
   }
-  handleInputChange = event => {
-    const value = event.target.value;
-    let data = this.state.data.filter(item => item.name.toLowerCase().includes(value.toLowerCase()));
+  throttleSearch = _.throttle(() => {
+    let data = this.state.data.filter(item => item.name.toLowerCase().includes(this.state.filterQuery));
     this.setState({
       filteredData: data,
     })
+  }, 500)
+
+
+  handleInputChange = event => {
+    const value = event.target.value.toLowerCase();
+
+    this.setState({
+      filterQuery: value,
+    });
+
+    this.throttleSearch();
   }
   render() {
     return (
       <div className={styles.container}>
         <div className={styles.topRow}>
-          <div className="left">Search: <input className={styles.searchBar} type="search" name="formsearch" onChange={this.handleInputChange}/></div>
+          <div className="left">
+            Search: <input className={styles.searchBar} type="search" name="formsearch" onChange={this.handleInputChange}/>
+          </div>
           <div className='updated'>Last market price update: <span className='updated-price'>{timeFromUpdated}</span></div>
         </div>
         <div className={styles.tableContainer}>
