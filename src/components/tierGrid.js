@@ -52,11 +52,23 @@ const FILTERS = [
     categories: ['containers']
   },
   {
+    text: 'Headwear',
+    categories: ['headwear']
+  },
+  {
     text: 'Gear',
     categories: [
       'additonal_armor',
       'thermal_vision_devices',
       'visors',
+    ]
+  },
+  {
+    text: 'Mods',
+    categories: [
+      'foregrips',
+      'pistol_grips',
+      'handguards'
     ]
   },
 ]
