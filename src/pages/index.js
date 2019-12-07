@@ -14,8 +14,8 @@ export default ({ data }) => (
       <title>EFT Loot Goblin</title>
       <link rel="canonical" href="https://eft-loot.com/" />
     </Helmet>
-    <div className='alpha'>
-      <span>Alpha version 0.0.8 test</span>
+    <div className='version'>
+      <span>Beta version 0.1.0</span>
       <span></span>
     </div>
     <Header />
