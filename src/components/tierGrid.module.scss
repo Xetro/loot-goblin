@@ -2,7 +2,7 @@ div {
   box-sizing: border-box;
 }
 
-img {
+.tableImg {
   max-width: 100%;
   max-height: 100%;
 }
@@ -29,7 +29,34 @@ img {
   }
 }
 
+.tableContainer {
+  margin-bottom: 80px;
+}
 
+
+.filtersRow {
+  display: flex;
+
+  .filter {
+    margin-left: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #2b2b2b;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: #3a3a3a;
+    }
+  }
+
+  .filterSelected {
+    background-color: #103c58;
+    
+    &:hover {
+      background-color: #154d71;
+    }
+  }
+}
 
 .flexTable {
   display: flex;
@@ -87,5 +114,17 @@ img {
   }
   &:nth-child(6) {
     width: 15%;
+  }
+
+  .fresh {
+    color: green;
+  }
+
+  .stale {
+    color: yellow;
+  }
+
+  .outdated {
+    color: red;
   }
 }

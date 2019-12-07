@@ -15,7 +15,7 @@ export default ({ data }) => (
       <link rel="canonical" href="https://eft-loot.com/" />
     </Helmet>
     <div className='alpha'>
-      <span>Alpha version 0.0.5 test</span>
+      <span>Alpha version 0.0.8 test</span>
       <span></span>
     </div>
     <Header />
@@ -38,6 +38,7 @@ export const query = graphql`
         imagePath
         id
         timestamp
+        category
       }
     }
   }
