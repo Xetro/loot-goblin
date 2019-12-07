@@ -32,6 +32,7 @@ export const query = graphql`
         price_avg
         price_array
         name
+        title
         price_per_slot
         slots
         imagePath

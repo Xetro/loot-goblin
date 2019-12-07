@@ -49,7 +49,7 @@ export default class TierGrid extends React.Component {
         {this.state.filteredData.map((item) => {
           return <div className={[styles.row, styles.flexTable].join(' ')} key={`content_wrap_${item.id}`} >
             <div className={styles.flexCell}><img src={item.imagePath} key={`content_image_${item.id}`} alt={item.name}></img></div>
-            <div className={styles.flexCell} key={`content_name_${item.id}`}><span><strong>{item.name}</strong></span></div>
+            <div className={styles.flexCell} key={`content_name_${item.id}`}><span><strong>{item.title}</strong></span></div>
             <div className={styles.flexCell} key={`content_slots_${item.id}`}><span>{item.slots}</span></div>
             <div className={styles.flexCell} key={`content_price_avg_${item.id}`}><span>{item.price_avg.toLocaleString()} &#8381;</span></div>
             <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}><span>{item.price_per_slot.toLocaleString()} &#8381;</span></div>
