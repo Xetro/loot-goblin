@@ -15,8 +15,8 @@ export default ({ data }) => (
       <link rel="canonical" href="https://eft-loot.com/" />
     </Helmet>
     <div className='alpha'>
-      <span>Alpha version 0.0.3 test</span>
-      <span>Current categories: Barter, Suppresors, Scopes, Keys, Medical</span>
+      <span>Alpha version 0.0.5 test</span>
+      <span></span>
     </div>
     <Header />
     <TierGrid graphData={ data }/>
@@ -37,6 +37,7 @@ export const query = graphql`
         slots
         imagePath
         id
+        timestamp
       }
     }
   }

@@ -73,12 +73,19 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22.5%;
+  width: 24%;
   padding: 0.5em 0.5em;
   border-right: solid 1px white;
   border-bottom: solid 1px white;
 
+  &:nth-child(1) {
+    width: 8%;
+  }
+
   &:nth-child(3) {
-    width: 10%;
+    width: 5%;
+  }
+  &:nth-child(6) {
+    width: 15%;
   }
 }

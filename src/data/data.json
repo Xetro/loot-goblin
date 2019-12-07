@@ -16039,25 +16039,11 @@
     "marketSearchName": "MPL-50 entrenching tool",
     "marketPositionOffset": 0,
     "price_array": [
-      1000000,
-      1099999,
-      1190000,
-      1200000,
-      1220000,
-      1224999,
-      1235000,
-      1249000,
-      1250000,
-      1250000,
-      1277777,
-      1300000,
-      1329999,
-      1390000
     ],
     "slots": 3,
     "timestamp": "20191207000539",
-    "price_per_slot": 365555,
-    "price_avg": 1096666
+    "price_per_slot": 0,
+    "price_avg": 0
   },
   {
     "name": "Red Rebel Ice pick",
