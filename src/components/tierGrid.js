@@ -67,6 +67,8 @@ const FILTERS = [
       'visors',
       'headsets',
       'eyewear',
+      'backpacks',
+      'chest_rigs'
     ]
   },
   {
@@ -76,6 +78,27 @@ const FILTERS = [
       'pistol_grips',
       'handguards',
       'tactical_combo_devices'
+    ]
+  },
+  {
+    text: 'Ammo',
+    categories: [
+      "762x25",
+      "9x18",
+      "9x19",
+      "9x21",
+      "46x30",
+      "57x28",
+      "545x39",
+      "556x45",
+      "762x39",
+      "762x51",
+      "762x54",
+      "9x39",
+      "366",
+      "127x55",
+      "12x70",
+      "20x70",
     ]
   },
 ]
