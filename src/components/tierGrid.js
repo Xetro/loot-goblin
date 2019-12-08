@@ -187,6 +187,14 @@ export default class TierGrid extends React.Component {
     }
   }
 
+  formatPrice = (price) => {
+    if (price > 0) {
+      return <span>{price.toLocaleString()} &#8381;</span>
+    } else {
+      return <span className={styles.outdated}>No market data available!</span>
+    }
+  }
+
   render() {
 
     return (
@@ -215,8 +223,8 @@ export default class TierGrid extends React.Component {
             <div className={styles.flexCell}><img src={item.imagePath} className={styles.tableImg} key={`content_image_${item.id}`} alt={item.name}></img></div>
             <div className={styles.flexCell} key={`content_name_${item.id}`}><span><strong>{item.title}</strong></span></div>
             <div className={styles.flexCell} key={`content_slots_${item.id}`}><span>{item.slots}</span></div>
-            <div className={styles.flexCell} key={`content_price_avg_${item.id}`}><span>{item.price_avg.toLocaleString()} &#8381;</span></div>
-            <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}><span>{item.price_per_slot.toLocaleString()} &#8381;</span></div>
+            <div className={styles.flexCell} key={`content_price_avg_${item.id}`}>{this.formatPrice(item.price_avg)}</div>
+            <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}>{this.formatPrice(item.price_per_slot)}</div>
             <div className={styles.flexCell} key={`content_timestamp_${item.id}`}><span className={this.getTimeStampClass(item.timestamp)}>{moment(item.timestamp, 'YYYYMMDDHHmmss').fromNow()}</span></div>
           </div>
         })}
