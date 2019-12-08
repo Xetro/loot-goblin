@@ -102,6 +102,44 @@ const FILTERS = [
     ]
   },
 ]
+const ammunition = {
+  categories: [
+      "762x25",
+      "9x18",
+      "9x19",
+      "9x21",
+      "46x30",
+      "57x28",
+      "545x39",
+      "556x45",
+      "762x39",
+      "762x51",
+      "762x54",
+      "9x39",
+      "366",
+      "127x55",
+      "12x70",
+      "20x70",
+    ],
+  stacks: {
+      "762x25": 50,
+      "9x18": 50,
+      "9x19": 50,
+      "9x21": 50,
+      "46x30": 70,
+      "57x28": 60,
+      "545x39": 60,
+      "556x45": 60,
+      "762x39": 60,
+      "762x51": 40,
+      "762x54": 40,
+      "9x39": 50,
+      "366": 50,
+      "127x55": 30,
+      "12x70": 20,
+      "20x70": 20
+  }
+}
 
 export default class TierGrid extends React.Component {
   state = {
@@ -210,11 +248,16 @@ export default class TierGrid extends React.Component {
     }
   }
 
-  formatPrice = (price) => {
-    if (price > 0) {
-      return <span>{price.toLocaleString()} &#8381;</span>
-    } else {
+  formatPrice = (price, category, isPPS) => {
+
+    if (price === 0) {
       return <span className={styles.outdated}>No market data available!</span>
+    }   
+    else if (isPPS && ammunition.categories.includes(category)) {
+      return <div className={styles.ammo}><span>{price.toLocaleString()} &#8381;</span><div className={styles.ammoStackText}>(Stack of {ammunition.stacks[category]})</div></div>
+    }
+    else {
+      return <span>{price.toLocaleString()} &#8381;</span>
     }
   }
 
@@ -246,9 +289,9 @@ export default class TierGrid extends React.Component {
             <div className={styles.flexCell}><img src={item.imagePath} className={styles.tableImg} key={`content_image_${item.id}`} alt={item.name}></img></div>
             <div className={styles.flexCell} key={`content_name_${item.id}`}><span><strong>{item.title}</strong></span></div>
             <div className={styles.flexCell} key={`content_slots_${item.id}`}><span>{item.slots}</span></div>
-            <div className={styles.flexCell} key={`content_price_avg_${item.id}`}>{this.formatPrice(item.price_avg)}</div>
-            <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}>{this.formatPrice(item.price_per_slot)}</div>
-            <div className={styles.flexCell} key={`content_timestamp_${item.id}`}><span className={this.getTimeStampClass(item.timestamp)}>{moment(item.timestamp, 'YYYYMMDDHHmmss').fromNow()}</span></div>
+            <div className={styles.flexCell} key={`content_price_avg_${item.id}`}>{this.formatPrice(item.price_avg, item.category, false)}</div>
+            <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}>{this.formatPrice(item.price_per_slot, item.category, true)}</div>
+            <div className={styles.flexCell} key={`content_timestamp_${item.id}`}><span className={this.getTimeStampClass(item.timestamp,)}>{moment(item.timestamp, 'YYYYMMDDHHmmss').fromNow()}</span></div>
           </div>
         })}
         </div>

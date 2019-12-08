@@ -39,6 +39,15 @@ div {
   margin-bottom: 80px;
 }
 
+.ammo {
+  text-align: center;
+
+  .ammoStackText {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
 
 .filtersRow {
   display: flex;
@@ -176,5 +185,9 @@ div {
     &:nth-of-type(4):before { content: "Average Price:"; }
     &:nth-of-type(5):before { content: "Price per slot:"; }
     &:nth-of-type(6):before { content: "Updated:"; }
+  }
+
+  .ammo {
+    text-align: unset;
   }
 }
