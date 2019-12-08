@@ -36,6 +36,10 @@ const FILTERS = [
     ]
   },
   {
+    text: 'Provisions',
+    categories: ['provisions']
+  },
+  {
     text: 'Keys',
     categories: [
       'keys_factory',
@@ -61,6 +65,8 @@ const FILTERS = [
       'additonal_armor',
       'thermal_vision_devices',
       'visors',
+      'headsets',
+      'eyewear',
     ]
   },
   {
@@ -68,7 +74,8 @@ const FILTERS = [
     categories: [
       'foregrips',
       'pistol_grips',
-      'handguards'
+      'handguards',
+      'tactical_combo_devices'
     ]
   },
 ]
