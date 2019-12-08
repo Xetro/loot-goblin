@@ -16,7 +16,7 @@ export default ({ data }) => (
       <link rel="canonical" href="https://eft-loot.com/" />
     </Helmet>
     <div className='version'>
-      <span>Beta version 0.2.3</span>
+      <span>Beta version 0.2.4</span>
       <span>
       </span>
     </div>
