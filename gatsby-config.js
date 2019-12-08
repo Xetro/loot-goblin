@@ -7,7 +7,9 @@
 module.exports = {
   siteMetadata: {
     title: `EFT Loot Goblin`,
-    description: `Market prices for EFT items`,
+    description: `Browse and compare Escape from Tarkov Flea Market item prices.`,
+    url: "https://eft-loot.com",
+    image: "thief.png"
   },
   
   plugins: [
@@ -52,7 +54,7 @@ module.exports = {
       options: {
         name: "EFT Loot Goblin App",
         short_name: "EFT Loot",
-        description: `Browse Escape from Tarkov Flea Market item prices.`,
+        description: `Browse and compare Escape from Tarkov Flea Market item prices.`,
         lang: `en`,
         start_url: "/",
         background_color: "#010406",
