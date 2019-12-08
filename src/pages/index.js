@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Header from "../components/header"
+import Footer from "../components/footer"
 import TierGrid from "../components/tierGrid"
 import { Helmet } from "react-helmet"
 
@@ -15,11 +16,13 @@ export default ({ data }) => (
       <link rel="canonical" href="https://eft-loot.com/" />
     </Helmet>
     <div className='version'>
-      <span>Beta version 0.1.3</span>
-      <span></span>
+      <span>Beta version 0.2.3</span>
+      <span>
+      </span>
     </div>
     <Header />
     <TierGrid graphData={ data }/>
+    <Footer />
   </div>
 )
 

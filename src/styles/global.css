@@ -6,6 +6,12 @@ html {
 
 body {
   overflow-x: hidden;
+
+
+}
+
+a {
+  color: #9A9E8F;
 }
 
 .version {
