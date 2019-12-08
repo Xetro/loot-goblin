@@ -77,7 +77,8 @@ const FILTERS = [
       'foregrips',
       'pistol_grips',
       'handguards',
-      'tactical_combo_devices'
+      'tactical_combo_devices',
+      'stocks_chassis'
     ]
   },
   {
