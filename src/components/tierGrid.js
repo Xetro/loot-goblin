@@ -62,7 +62,7 @@ const FILTERS = [
   {
     text: 'Gear',
     categories: [
-      'additonal_armor',
+      'additional_armor',
       'thermal_vision_devices',
       'visors',
       'headsets',
