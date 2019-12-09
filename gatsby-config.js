@@ -9,7 +9,7 @@ module.exports = {
     title: `EFT Loot Goblin`,
     description: `Browse and compare Escape from Tarkov Flea Market item prices.`,
     url: "https://eft-loot.com",
-    image: "thief.png"
+    image: "loot-goblin.png"
   },
   
   plugins: [

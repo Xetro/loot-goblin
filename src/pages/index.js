@@ -18,6 +18,7 @@ export default ({ data }) => (
       <meta name="keywords" content="EFT,Escape from Tarkov,loot goblin,EFT loot,eft-loot,tarkov loot goblin,tarkov flea market, flea market prices" /> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href="https://www.eft-loot.com" />
+      <meta property="og:image" content="loot-goblin.png" />
     </Helmet>
     <div className='version'>
       <span>Beta version 0.2.4</span>
