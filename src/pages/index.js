@@ -21,8 +21,9 @@ export default ({ data }) => (
       <meta property="og:image" content="loot-goblin.png" />
     </Helmet>
     <div className='version'>
-      <span>Beta version 0.2.4</span>
+      <span>Beta version 0.2.5</span>
       <span>
+        Notice: Due to error in timezones calculation, updated timestamp was displayed incorrectly outside of EU UTC+1 region. Now fixed and should show correct last update info.
       </span>
     </div>
     <Header />

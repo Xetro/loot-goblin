@@ -236,7 +236,7 @@ export default class TierGrid extends React.Component {
 
 
   getTimeStampClass = (timestamp) => {
-    const hourDiff = moment().diff(moment(timestamp+'CET', 'YYYYMMDDHHmmsszz'), 'hours');
+    const hourDiff = moment().diff(moment(timestamp+'+0100', 'YYYYMMDDHHmmssZ'), 'hours');
     
     if (hourDiff < 8) {
       return styles.brandNew;
@@ -292,7 +292,7 @@ export default class TierGrid extends React.Component {
             <div className={styles.flexCell} key={`content_slots_${item.id}`}><span>{item.slots}</span></div>
             <div className={styles.flexCell} key={`content_price_avg_${item.id}`}>{this.formatPrice(item.price_avg, item.category, false)}</div>
             <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}>{this.formatPrice(item.price_per_slot, item.category, true)}</div>
-            <div className={styles.flexCell} key={`content_timestamp_${item.id}`}><span className={this.getTimeStampClass(item.timestamp,)}>{moment(item.timestamp, 'YYYYMMDDHHmmss').fromNow()}</span></div>
+            <div className={styles.flexCell} key={`content_timestamp_${item.id}`}><span className={this.getTimeStampClass(item.timestamp,)}>{moment(item.timestamp+'+0100', 'YYYYMMDDHHmmssZ').fromNow()}</span></div>
           </div>
         })}
         </div>
