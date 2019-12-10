@@ -33,6 +33,9 @@ export default ({ data }) => (
 )
 
 const RenderFooter = () => {
+  if (typeof window === `undefined`) {
+    return <Footer />
+  }
   const ttl = window.localStorage.getItem('hideFooter');
   if (!ttl || moment().isAfter(moment(ttl))) {
     return <Footer />
