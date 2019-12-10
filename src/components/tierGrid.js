@@ -236,7 +236,7 @@ export default class TierGrid extends React.Component {
 
 
   getTimeStampClass = (timestamp) => {
-    const hourDiff = moment().diff(moment(timestamp, 'YYYYMMDDHHmmss'), 'hours');
+    const hourDiff = moment().diff(moment(timestamp+'CET', 'YYYYMMDDHHmmsszz'), 'hours');
     
     if (hourDiff < 8) {
       return styles.brandNew;
