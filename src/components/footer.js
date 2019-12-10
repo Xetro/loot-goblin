@@ -1,9 +1,10 @@
 import React from "react"
 import styles from "./footer.module.scss"
+import moment from "moment";
 
 const hideFooter = ($event) => {
   $event.target.parentElement.classList.toggle(styles.hidden);
-
+  window.localStorage.setItem('hideFooter', moment().add(2, 'd').format());
 }
 
 export default () => (

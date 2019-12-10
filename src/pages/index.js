@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import TierGrid from "../components/tierGrid"
 import { Helmet } from "react-helmet"
+import moment from "moment";
 
 
 
@@ -28,9 +29,17 @@ export default ({ data }) => (
     </div>
     <Header />
     <TierGrid graphData={ data }/>
-    <Footer />
+    <RenderFooter />
   </div>
 )
+
+const RenderFooter = () => {
+  const ttl = window.localStorage.getItem('hideFooter');
+  if (!ttl || moment().isAfter(moment(ttl))) {
+    return <Footer />
+  }
+  return null;
+}
 
 
 export const query = graphql`
