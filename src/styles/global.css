@@ -1,3 +1,5 @@
+/* @import 'reset.css'; */
+
 html {
   background-color: #010406;
   font-family: 'Bender';
@@ -6,6 +8,7 @@ html {
 
 body {
   overflow-x: hidden;
+  margin:  1rem 2rem;
 
 
 }
@@ -19,4 +22,10 @@ a {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    margin: 1rem 1rem;
+  }
 }

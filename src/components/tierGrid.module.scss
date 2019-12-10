@@ -9,9 +9,11 @@ div {
 
 .container {
   display: block;
-  margin: 2em auto;
-  width: 90%;
-  margin-top: 0;
+  margin: 0 4rem;
+
+  @media screen and (max-width: 1000px) {
+    margin: 0;
+  }
 }
 
 .topRow {
@@ -152,8 +154,8 @@ div {
 
 
 @media screen and (max-width: 700px) {
-  .flexTable {
 
+  .flexTable {
     &:first-of-type .flexCell {
       display:none;
     }
@@ -190,4 +192,15 @@ div {
   .ammo {
     text-align: unset;
   }
+}
+
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
 }

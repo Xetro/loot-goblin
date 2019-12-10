@@ -8,7 +8,7 @@ const hideFooter = ($event) => {
 }
 
 export default () => (
-  <div className={styles.footer}>
+  <footer className={styles.footer}>
     <div className={styles.hideFooter} onClick={hideFooter}>
       <span className={[styles.chevron, styles.bottom].join(' ')}></span>
     </div>
@@ -21,5 +21,5 @@ export default () => (
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
       </form>
     </div>
-</div>
+  </footer>
 )

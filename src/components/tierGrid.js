@@ -276,26 +276,26 @@ export default class TierGrid extends React.Component {
             })}
           </div>
         </div>
-        <div id='eft_table' className={styles.tableContainer}>
-          <div className={[styles.header, styles.flexTable].join(' ')}>
+        <ul id='eft_table' className={styles.tableContainer}>
+          <li className={[styles.header, styles.flexTable].join(' ')}>
           <div className={styles.flexCell}>Image</div>
           <div className={styles.flexCell}>Name</div>
           <div className={styles.flexCell}>Slots</div>
           <div className={styles.flexCell}>Average Price</div>
           <div className={styles.flexCell}>Price per slot</div>
           <div className={styles.flexCell}>Updated</div>
-        </div>
+        </li>
         {this.state.displayData.map((item) => {
-          return <div className={[styles.row, styles.flexTable].join(' ')} key={`content_wrap_${item.id}`} >
+          return <li className={[styles.row, styles.flexTable].join(' ')} key={`content_wrap_${item.id}`} >
             <div className={styles.flexCell}><img src={item.imagePath} className={styles.tableImg} key={`content_image_${item.id}`} alt={item.name}></img></div>
             <div className={styles.flexCell} key={`content_name_${item.id}`}><span><strong>{item.title}</strong></span></div>
             <div className={styles.flexCell} key={`content_slots_${item.id}`}><span>{item.slots}</span></div>
             <div className={styles.flexCell} key={`content_price_avg_${item.id}`}>{this.formatPrice(item.price_avg, item.category, false)}</div>
             <div className={styles.flexCell} key={`content_price_per_slot_${item.id}`}>{this.formatPrice(item.price_per_slot, item.category, true)}</div>
             <div className={styles.flexCell} key={`content_timestamp_${item.id}`}><span className={this.getTimeStampClass(item.timestamp,)}>{moment(item.timestamp+'+0100', 'YYYYMMDDHHmmssZ').fromNow()}</span></div>
-          </div>
+          </li>
         })}
-        </div>
+        </ul>
       </div>
     )
   }
