@@ -5,13 +5,6 @@
  */
 
 module.exports = {
-  siteMetadata: {
-    title: `EFT Loot Goblin`,
-    description: `Browse and compare Escape from Tarkov Flea Market item prices.`,
-    url: "https://eft-loot.com",
-    image: "loot-goblin.png"
-  },
-  
   plugins: [
     `gatsby-plugin-lodash`,
     `gatsby-plugin-react-helmet`,
