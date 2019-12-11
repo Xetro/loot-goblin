@@ -4,7 +4,7 @@ import moment from "moment";
 
 const hideFooter = ($event) => {
   $event.target.parentElement.classList.toggle(styles.hidden);
-  window.localStorage.setItem('hideFooter', moment().add(2, 'd').format());
+  window.localStorage.setItem('hideFooter', moment().add(1, 'd').format());
 }
 
 export default () => (
