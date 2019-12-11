@@ -1,7 +1,7 @@
 /* @import 'reset.css'; */
 
 html {
-  background-color: #010406;
+  background-color: rgb(1, 4, 6);
   font-family: 'Bender';
   color: #9A9E8F;
 }
@@ -9,8 +9,6 @@ html {
 body {
   overflow-x: hidden;
   margin:  1rem 1rem;
-
-
 }
 
 a {

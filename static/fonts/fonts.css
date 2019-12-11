@@ -1,4 +1,10 @@
 @font-face {
   font-family: "Bender";
-  src: url("Bender.otf");
+  src: url("./Bender.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bender";
+  src: url("./Bender-Bold.woff") format("woff");
+  font-weight: bold;
 }
