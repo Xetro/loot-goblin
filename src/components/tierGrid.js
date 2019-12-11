@@ -212,13 +212,14 @@ export default class TierGrid extends React.Component {
     if (window.innerWidth > 700) {
       if (window.scrollY >= this.state.tableEl.offsetTop && !this.state.isHeaderFixed) {
         this.state.headerEl.classList.toggle(styles.fixedHeader);
-        this.state.tableEl.style.marginTop = '2.5rem';
+        this.state.tableEl.classList.toggle(styles.tableMargin);
         this.setState({
           isHeaderFixed: true
         })
       } else if (window.scrollY < (this.state.tableEl.offsetTop - 40) && this.state.isHeaderFixed) {
         this.state.headerEl.classList.toggle(styles.fixedHeader);
-        this.state.tableEl.style.marginTop = '0';
+        this.state.tableEl.classList.toggle(styles.tableMargin);
+
         this.setState({
           isHeaderFixed: false
         })
