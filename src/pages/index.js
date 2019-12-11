@@ -32,7 +32,7 @@ export default ({ data }) => (
       
     </Helmet>
     <div className='version'>
-      <span>Beta version 0.2.5</span>
+      <span>Beta version 0.3.5</span>
       <span>
       </span>
     </div>
