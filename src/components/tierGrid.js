@@ -57,7 +57,9 @@ const FILTERS = [
   },
   {
     text: 'Headwear',
-    categories: ['headwear']
+    categories: [
+      'headwear',
+    ]
   },
   {
     text: 'Gear',
@@ -68,7 +70,12 @@ const FILTERS = [
       'headsets',
       'eyewear',
       'backpacks',
-      'chest_rigs'
+      'chest_rigs',
+      'face_cover',
+      'helmet_mounts',
+      'helmet_headsets',
+      'night_vision_devices',
+      'helmet_vanity'
     ]
   },
   {
@@ -78,7 +85,10 @@ const FILTERS = [
       'pistol_grips',
       'handguards',
       'tactical_combo_devices',
-      'stocks_chassis'
+      'stocks_chassis',
+      'auxiliary_parts',
+      'flashlights',
+      'laser_target_pointers'
     ]
   },
   {
