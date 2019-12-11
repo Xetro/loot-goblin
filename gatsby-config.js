@@ -24,7 +24,8 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Bender", 'Special Elite'],
+          families: ["Bender"],
+          urls: ['/fonts/fonts.css']
         },
       },
     },
