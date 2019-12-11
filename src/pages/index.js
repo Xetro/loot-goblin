@@ -17,19 +17,18 @@ export default ({ data }) => (
 
       <meta name="keywords" content="EFT,Escape from Tarkov,loot goblin,EFT loot,eft-loot,tarkov loot goblin,tarkov flea market, flea market prices" /> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="canonical" href="https://www.eft-loot.com" />
 
       <meta property="og:type" content="website"></meta>
-      <meta property="og:url" content="https://metatags.io/" />
+      <meta property="og:url" content="https://eft-loot.com/" />
       <meta property="og:title" content="EFT Loot Goblin - Flea Market Companion" />
       <meta property="og:description" content="Browse Escape from Tarkov Flea Market item prices.  Compare thousands items based on their market price or price per slot. Including weapons, gear, keys, loot, mods, provisions and more" />
-      <meta property="og:image" content="https://www.eft-loot.com/loot-goblin.png" />
+      <meta property="og:image" content="https://eft-loot.com/loot-goblin.png" />
 
       <meta property="twitter:card" content="summary_large_image"></meta>
-      <meta property="twitter:url" content="https://metatags.io/" />
+      <meta property="twitter:url" content="https://eft-loot.com/" />
       <meta property="twitter:title" content="EFT Loot Goblin - Flea Market Companion" />
       <meta property="twitter:description" content="Browse Escape from Tarkov Flea Market item prices.  Compare thousands items based on their market price or price per slot. Including weapons, gear, keys, loot, mods, provisions and more" />
-      <meta property="twitter:image" content="https://www.eft-loot.com/loot-goblin.png" />
+      <meta property="twitter:image" content="https://eft-loot.com/loot-goblin.png" />
       
     </Helmet>
     <div className='version'>
