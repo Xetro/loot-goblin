@@ -26,7 +26,7 @@ module.exports = {
       options: {
         custom: {
           families: ["Bender"],
-          urls: ['/fonts/fonts.css']
+          urls: ['fonts/fonts.css']
         },
       },
     },
