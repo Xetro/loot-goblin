@@ -2,6 +2,8 @@ import React from "react"
 import styles from "./tierGrid.module.scss"
 import * as moment from 'moment';
 import * as _ from 'lodash';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 const LIMIT = 50;
 const FILTERS = [
@@ -249,13 +251,15 @@ export default class TierGrid extends React.Component {
     }
     
     let data;
-    if (!appliedFilters.length) {
+    if (!appliedFilters.length && this.state.searchQuery.length) {
       data = this.state.allData.filter(item => item.title.toLowerCase().includes(this.state.searchQuery));
-    } else {
+    } else if (appliedFilters.length) {
       const flattenedFilters = appliedFilters.flat();
       data = this.state.allData.filter(item => {
         return flattenedFilters.includes(item.category) && item.title.toLowerCase().includes(this.state.searchQuery);
       });
+    } else {
+      data = this.state.allData;
     }
 
     this.setState({
@@ -293,6 +297,56 @@ export default class TierGrid extends React.Component {
     }
   }
 
+  sortTable = (column, direction, event) => {
+    let icons = document.getElementsByClassName(styles.selectedSortIcon);
+    for (let icon of icons) {
+      icon.classList.remove(styles.selectedSortIcon);
+    }
+
+    event.target.classList.add(styles.selectedSortIcon);
+
+    let sortedAll = this.state.allData;
+    sortedAll.sort((a, b) => {
+      if (a[column] > b[column]) {
+        if (direction === "down") {
+          return -1;
+        } else {
+          return 1;
+        }
+      }
+
+      if (b[column] > a[column]) {
+        if (direction === "down") {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+      return 0;
+    });
+
+    const flattenedFilters = this.state.appliedFilters.flat();
+    let filtered;
+
+    if (!flattenedFilters.length && this.state.searchQuery) {
+      filtered = sortedAll.filter(item => {
+          return item.title.toLowerCase().includes(this.state.searchQuery);
+      });
+    } else if (flattenedFilters.length) {
+      filtered = sortedAll.filter(item => {
+        return flattenedFilters.includes(item.category) && item.title.toLowerCase().includes(this.state.searchQuery);
+    });
+    } else {
+      filtered = sortedAll;
+    }
+    
+    this.setState({
+      allData: sortedAll,
+      filteredData: filtered,
+      displayData: filtered.slice(0, this.state.lastSlice)
+    })
+  }
+
   render() {
 
     return (
@@ -310,10 +364,25 @@ export default class TierGrid extends React.Component {
         <div id='items_table' className={styles.tableContainer}>
           <div id='table_header' className={[styles.header, styles.flexTable].join(' ')}>
             <div className={styles.flexCell}>Image</div>
-            <div className={styles.flexCell}>Name</div>
+            <div className={styles.flexCell}>Name
+              <div className={styles.sortWrapper}>
+                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronUp} onClick={this.sortTable.bind(this, 'title', 'up')} />
+                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronDown}  onClick={this.sortTable.bind(this, 'title', 'down')} />
+              </div>
+            </div>
             <div className={styles.flexCell}>Slots</div>
-            <div className={styles.flexCell}>Average Price</div>
-            <div className={styles.flexCell}>Price per slot</div>
+            <div className={styles.flexCell}>Average Price
+              <div className={styles.sortWrapper}>
+                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronUp} onClick={this.sortTable.bind(this, 'price_avg', 'up')} />
+                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronDown}  onClick={this.sortTable.bind(this, 'price_avg', 'down')} />
+              </div>
+            </div>
+            <div className={styles.flexCell}>Price per slot
+              <div className={styles.sortWrapper}>
+                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronUp} onClick={this.sortTable.bind(this, 'price_per_slot', 'up')} />
+                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronDown}  onClick={this.sortTable.bind(this, 'price_per_slot', 'down')} />
+              </div>
+            </div>
             <div className={styles.flexCell}>Updated</div>
           </div>
         {this.state.displayData.map((item) => {
