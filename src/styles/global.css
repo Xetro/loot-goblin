@@ -27,3 +27,8 @@ a {
     margin: 0.5rem 0.5rem;
   }
 }
+
+.leaflet-container {
+  width: 512px;
+  height: 512px;
+}

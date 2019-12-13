@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import TierGrid from "../components/tierGrid"
+import Maps from "../components/maps"
 import { Helmet } from "react-helmet"
 import moment from "moment";
 
@@ -35,8 +36,9 @@ export default ({ data }) => (
       <span>
       </span>
     </div>
-    <Header />
-    <TierGrid graphData={ data }/>
+    {/* <Header /> */}
+    {/* <TierGrid graphData={ data }/> */}
+    <Maps />
     <RenderFooter />
   </div>
 )
