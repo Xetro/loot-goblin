@@ -29,7 +29,23 @@ export default ({ data }) => (
       <meta property="twitter:title" content="EFT Loot Goblin - Flea Market Companion" />
       <meta property="twitter:description" content="Browse Escape from Tarkov Flea Market item prices.  Compare thousands items based on their market price or price per slot. Including weapons, gear, keys, loot, mods, provisions and more" />
       <meta property="twitter:image" content="https://eft-loot.com/loot-goblin.png" />
-      
+      <script type="application/ld+json">
+        {
+          "@context":"https://schema.org/",
+          "@type":"Dataset",
+          "name":"Flea Market prices for EFT items",
+          "description":"Dataset of Escape from Tarkov items with their Flea Market prices, slot sizes and price per slot values",
+          "url":"https://eft-loot.com",
+          "keywords":[
+            "price per slot",
+            "flea market price",
+            "Escape from Tarkov item price",
+            "EFT item price"
+          ],
+          "license" : "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+        }
+      </script>
+
     </Helmet>
     <div className='version'>
       <span>Beta version 0.4.7</span>
