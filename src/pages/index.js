@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import TierGrid from "../components/tierGrid"
+import Maps from "../components/maps"
 import { Helmet } from "react-helmet"
 import moment from "moment";
 
@@ -29,15 +30,15 @@ export default ({ data }) => (
       <meta property="twitter:title" content="EFT Loot Goblin - Flea Market Companion" />
       <meta property="twitter:description" content="Browse Escape from Tarkov Flea Market item prices.  Compare thousands items based on their market price or price per slot. Including weapons, gear, keys, loot, mods, provisions and more" />
       <meta property="twitter:image" content="https://eft-loot.com/loot-goblin.png" />
-      
     </Helmet>
     <div className='version'>
       <span>Beta version 0.4.7</span>
       <span>
       </span>
     </div>
-    <Header />
-    <TierGrid graphData={ data }/>
+    {/* <Header /> */}
+    {/* <TierGrid graphData={ data }/> */}
+    <Maps />
     <RenderFooter />
   </div>
 )
