@@ -90,7 +90,8 @@ const FILTERS = [
       'stocks_chassis',
       'auxiliary_parts',
       'flashlights',
-      'laser_target_pointers'
+      'laser_target_pointers',
+      'barrels'
     ]
   },
   {
