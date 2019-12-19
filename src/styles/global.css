@@ -27,12 +27,18 @@ a {
   body {
     margin: 0.5rem 0.5rem;
   }
+
+  #bmc-wbtn {
+    right: 15px!important;
+    top: 15px!important;
+    position: absolute;
+  }
 }
 
 #bmc-wbtn {
-  width: 40px!important;
-  height: 40px!important;
-  right: 19px!important;
+  width: 50px!important;
+  height: 50px!important;
+  right: 15px!important;
   bottom: 15px!important;
   background: #0c2a38!important;
 }
