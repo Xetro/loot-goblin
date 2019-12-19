@@ -27,11 +27,13 @@ a {
   body {
     margin: 0.5rem 0.5rem;
   }
+}
 
+@media screen and (max-width: 1000px) {
   #bmc-wbtn {
     right: 15px!important;
     top: 15px!important;
-    position: absolute;
+    position: absolute!important;
   }
 }
 
