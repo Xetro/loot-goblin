@@ -9,7 +9,7 @@ export default class Maps extends React.Component {
             return (
                 <Map center={[0, 0]} zoom={0} crs={CRS.Simple} bounds={[[0,0],[-256,256]]}>
                     {/* <ImageOverlay url='factory_map.jpg' bounds={[[0,0], [1000,1400]]}></ImageOverlay> */}
-                    <TileLayer url={'map_test/{z}/{x}/{y}.PNG'}></TileLayer>
+                    <TileLayer url={'map_test/{z}/{x}/{y}.jpg'}></TileLayer>
                     <Marker position={[-128, 128]}>
                     <Popup>
                         A pretty CSS3 popup. <br/> Easily customizable.
