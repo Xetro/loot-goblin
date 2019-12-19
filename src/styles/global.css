@@ -28,3 +28,16 @@ a {
     margin: 0.5rem 0.5rem;
   }
 }
+
+#bmc-wbtn {
+  width: 40px;
+  height: 40px;
+  right: 19px;
+  bottom: 15px;
+  background: #0c2a38;
+}
+
+#bmc-wbtn .img {
+  width: 30px;
+  height: 30px;
+}
