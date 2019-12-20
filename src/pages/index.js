@@ -15,7 +15,7 @@ export default ({ data }) => (
       <meta name="title" content="EFT Loot Goblin - Flea Market Companion" />
       <meta name="description" content="Browse Escape from Tarkov Flea Market item prices.  Compare thousands items based on their market price or price per slot. Including weapons, gear, keys, loot, mods, provisions and more" />
 
-      <meta name="keywords" content="EFT,Escape from Tarkov,loot goblin,EFT loot,eft-loot,tarkov loot goblin,tarkov flea market, flea market prices" /> 
+      <meta name="keywords" content="EFT,Escape from Tarkov,loot goblin,EFT loot,eft-loot,tarkov loot,tarkov flea market, flea market prices" /> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <meta property="og:type" content="website"></meta>
