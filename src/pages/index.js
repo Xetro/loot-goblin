@@ -31,7 +31,7 @@ export default ({ data }) => (
       <meta property="twitter:image" content="https://eft-loot.com/loot-goblin.png" />
     </Helmet>
     <div className='version'>
-      <span>Beta version 0.4.7</span>
+      <span>Beta version 0.4.8</span>
       <span>
       </span>
     </div>

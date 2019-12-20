@@ -375,7 +375,7 @@ export default class TierGrid extends React.Component {
             <div className={styles.flexCell}>Average Price
               <div className={styles.sortWrapper}>
                 <FontAwesomeIcon className={styles.sortIcon} icon={faChevronUp} onClick={this.sortTable.bind(this, 'price_avg', 'up')} />
-                <FontAwesomeIcon className={styles.sortIcon} icon={faChevronDown}  onClick={this.sortTable.bind(this, 'price_avg', 'down')} />
+                <FontAwesomeIcon className={[styles.sortIcon, styles.selectedSortIcon].join(' ')} icon={faChevronDown}  onClick={this.sortTable.bind(this, 'price_avg', 'down')} />
               </div>
             </div>
             <div className={styles.flexCell}>Price per slot
