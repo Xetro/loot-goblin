@@ -91,7 +91,14 @@ const FILTERS = [
       'auxiliary_parts',
       'flashlights',
       'laser_target_pointers',
-      'barrels'
+      'barrels',
+      "bipods",
+      "muzzle_adapters",
+      "flash_hiders_muzzle_brakes",
+      "charging_handles",
+      "mounts",
+      "gas_blocks",
+      "receivers_slides"
     ]
   },
   {
