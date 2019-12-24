@@ -33,6 +33,8 @@ export default ({ data }) => (
     <div className='version'>
       <span>Beta version 0.4.8</span>
       <span>
+        NOTICE: I'll be going back home to visit family during holidays, so data on eft-loot will not be regulary updated for about a week.
+        Thank you for understanding and Happy Holidays everyone!🎅
       </span>
     </div>
     <Header />
