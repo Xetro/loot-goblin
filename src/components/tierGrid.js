@@ -64,6 +64,13 @@ const FILTERS = [
     ]
   },
   {
+    text: 'Armor',
+    categories: [
+      'armor_vests',
+      'armored_chest_rigs'
+    ]
+  },
+  {
     text: 'Gear',
     categories: [
       'additional_armor',
