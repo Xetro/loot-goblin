@@ -109,6 +109,12 @@ const FILTERS = [
     ]
   },
   {
+    text: 'Magazines',
+    categories: [
+      'magazines'
+    ]
+  },
+  {
     text: 'Ammo',
     categories: [
       "762x25",
