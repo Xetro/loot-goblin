@@ -8,97 +8,97 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 const LIMIT = 50;
 const FILTERS = [
   {
-    text: 'Weapons',
-    categories: ['weapons']
+    text: "Weapons",
+    categories: ["weapons"]
   },
   {
-    text: 'Barter',
-    categories: ['loot']
+    text: "Barter",
+    categories: ["loot"]
   },
   {
-    text: 'Suppresors',
-    categories: ['suppressors']
+    text: "Suppresors",
+    categories: ["suppressors"]
   },
   {
-    text: 'Sights',
+    text: "Sights",
     categories: [
-      'reflex_sights',
-      'compact_reflex_sights',
-      'iron_sights',
-      'scopes',
-      'assault_scopes',
-      'special_scopes'
+      "reflex_sights",
+      "compact_reflex_sights",
+      "iron_sights",
+      "scopes",
+      "assault_scopes",
+      "special_scopes"
     ]
   },
   {
-    text: 'Medical',
+    text: "Medical",
     categories: [
-      'medical',
-      'injectors'
+      "medical",
+      "injectors"
     ]
   },
   {
-    text: 'Provisions',
-    categories: ['provisions']
+    text: "Provisions",
+    categories: ["provisions"]
   },
   {
-    text: 'Keys',
+    text: "Keys",
     categories: [
-      'keys_factory',
-      'keys_customs',
-      'keys_woods',
-      'keys_shoreline',
-      'keys_interchange',
-      'keys_labs',
-      'keys_reserve',
+      "keys_factory",
+      "keys_customs",
+      "keys_woods",
+      "keys_shoreline",
+      "keys_interchange",
+      "keys_labs",
+      "keys_reserve",
     ]
   },
   {
-    text: 'Containers',
-    categories: ['containers']
+    text: "Containers",
+    categories: ["containers"]
   },
   {
-    text: 'Headwear',
+    text: "Headwear",
     categories: [
-      'headwear',
+      "headwear",
     ]
   },
   {
-    text: 'Armor',
+    text: "Armor",
     categories: [
-      'armor_vests',
-      'armored_chest_rigs'
+      "armor_vests",
+      "armored_chest_rigs"
     ]
   },
   {
-    text: 'Gear',
+    text: "Gear",
     categories: [
-      'additional_armor',
-      'thermal_vision_devices',
-      'visors',
-      'headsets',
-      'eyewear',
-      'backpacks',
-      'chest_rigs',
-      'face_cover',
-      'helmet_mounts',
-      'helmet_headsets',
-      'night_vision_devices',
-      'helmet_vanity'
+      "additional_armor",
+      "thermal_vision_devices",
+      "visors",
+      "headsets",
+      "eyewear",
+      "backpacks",
+      "chest_rigs",
+      "face_cover",
+      "helmet_mounts",
+      "helmet_headsets",
+      "night_vision_devices",
+      "helmet_vanity"
     ]
   },
   {
-    text: 'Mods',
+    text: "Mods",
     categories: [
-      'foregrips',
-      'pistol_grips',
-      'handguards',
-      'tactical_combo_devices',
-      'stocks_chassis',
-      'auxiliary_parts',
-      'flashlights',
-      'laser_target_pointers',
-      'barrels',
+      "foregrips",
+      "pistol_grips",
+      "handguards",
+      "tactical_combo_devices",
+      "stocks_chassis",
+      "auxiliary_parts",
+      "flashlights",
+      "laser_target_pointers",
+      "barrels",
       "bipods",
       "muzzle_adapters",
       "flash_hiders_muzzle_brakes",
@@ -109,13 +109,13 @@ const FILTERS = [
     ]
   },
   {
-    text: 'Magazines',
+    text: "Magazines",
     categories: [
-      'magazines'
+      "magazines"
     ]
   },
   {
-    text: 'Ammo',
+    text: "Ammo",
     categories: [
       "762x25",
       "9x18",
@@ -180,7 +180,7 @@ export default class TierGrid extends React.Component {
     allData: this.props.graphData.allDataJson.nodes,
     filteredData: this.props.graphData.allDataJson.nodes,
     displayData: this.props.graphData.allDataJson.nodes.slice(0, LIMIT),
-    searchQuery: '',
+    searchQuery: "",
     tableEl: null,
     headerEl: null,
     isHeaderFixed: false,
