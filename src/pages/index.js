@@ -33,6 +33,7 @@ export default ({ data }) => (
     <div className='version'>
       <span>Beta version 0.6.0</span>
       <span>
+        NOTICE: Additionaly to recent Flea Market load issues, new 0.12.3 update seems to have broken Flea Market search functionality a bit. So expect less price updates in following days, until we figure it out.
       </span>
     </div>
     <Header />
