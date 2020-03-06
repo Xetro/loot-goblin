@@ -8446,7 +8446,7 @@
         "marketPositionOffset": 0,
         "timestamp": "202003050102524",
         "price_avg": 19796,
-        "price_per_slot": 9898,
+        "price_per_slotnu: 9898,
         "slots": 2
     },
     {
@@ -33414,4 +33414,4 @@
         "price_per_slot": 122,
         "slots": 1
     }
-]]
+]
